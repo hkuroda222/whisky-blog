@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    loader: 'custom',
+    domains: ['images.microcms-assets.io'],
+  },
+};
 
 export default nextConfig;
