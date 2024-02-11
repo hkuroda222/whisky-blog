@@ -29,7 +29,7 @@ const ArticleDetail = async ({ params }: { params: { articleId: string } }) => {
             </div>
           )}
           <div className="mt-2">
-            <div className="text-2xl text-gray-700 mt-4 rounded ">
+            <div className="prose text-2xl text-gray-700 mt-4 rounded ">
               {parse(articleData.content)}
             </div>
           </div>
