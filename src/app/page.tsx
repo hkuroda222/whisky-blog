@@ -1,5 +1,5 @@
 import { client } from '@/libs/client';
-import { ListItem } from '@/components/ListItem';
+import { ListItem } from '@/components/listItem';
 import { Articles } from '@/types/article';
 
 const Home: () => Promise<JSX.Element> = async () => {

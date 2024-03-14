@@ -3,6 +3,7 @@
 //Error: Functions cannot be passed directly to Client Components unless you explicitly expose it by marking it with "use server".
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { Content } from '@/types/article';
 
 const microCMSLoader = ({ src, width }: { src: string; width: number }) =>
@@ -21,7 +22,9 @@ export const ListItem: React.FC<{ content: Content }> = (props) => {
         width={300}
         height={200}
       />
-      <div className="px-6 py-4">{content.title}</div>
+      <Link href={`/articles/${content.id}`} className="block px-6 py-4">
+        {content.title}
+      </Link>
       <div className="px-6 pt-4 pb-2">
         <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
           #{content.category.name}
